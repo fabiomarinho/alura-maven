@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  web-maven:
+    build: workspace/.
+    #ports:
+    #  - "3000:3000"
+    volumes:
+      - ./workspace:/workspace
+    networks:
+      - alura-web-network
+    working_dir: /workspace
+    command: tail -f /dev/null
+
+networks:
+  alura-web-network:
+    driver: bridge
