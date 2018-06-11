@@ -19,6 +19,10 @@ public class Produto {
 		return nome;
 	}
 
+	public double getPrecoComImposto() {
+		return getPreco()*1.1;
+	}
+
 	
 	
 }
