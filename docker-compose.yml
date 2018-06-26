@@ -11,6 +11,7 @@ services:
       - alura-web-network
     working_dir: /workspace
     command: bash -c "cd lojaweb && mvn jetty:run"
+    #command: bash -c "mvn archetype:generate -DartifactId=lojaweb -Dversion=1.0-SNAPSHOT -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-webapp"
 
 networks:
   alura-web-network:
