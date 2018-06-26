@@ -5,3 +5,5 @@ javac -sourcepath src/main -d target/classes -cp lib/xstream-1.4.10.jar  src/mai
 mvn archetype:generate -DartifactId=produtos -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-quickstart
 
 mvn pmd:pmd
+
+mvn archetype:generate -DartifactId=lojaweb -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-webapp

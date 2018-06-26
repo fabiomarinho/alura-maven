@@ -3,14 +3,14 @@ version: '2'
 services:
   web-maven:
     build: workspace/.
-    #ports:
-    #  - "3000:3000"
+    ports:
+      - "8080:8080"
     volumes:
       - ./workspace:/workspace
     networks:
       - alura-web-network
     working_dir: /workspace
-    command: tail -f /dev/null
+    command: bash -c "cd lojaweb && mvn jetty:run"
 
 networks:
   alura-web-network:
