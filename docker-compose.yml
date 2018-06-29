@@ -7,10 +7,11 @@ services:
       - "8080:8080"
     volumes:
       - ./workspace:/workspace
+      - ./.m2:/root/.m2
     networks:
       - alura-web-network
     working_dir: /workspace
-    command: bash -c "cd lojaweb && mvn jetty:run"
+    command: bash -c "cd produtos && mvn install && cd ../lojaweb && mvn jetty:run"
     #command: bash -c "mvn archetype:generate -DartifactId=lojaweb -Dversion=1.0-SNAPSHOT -DgroupId=br.com.alura.maven -DinteractiveMode=false -DarchetypeArtifactId=maven-archetype-webapp"
 
 networks:
